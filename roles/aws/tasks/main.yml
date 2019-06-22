@@ -43,8 +43,6 @@
     #delay: 120
 - name: Create basic EC2 Instance
   ec2:
-    aws_access_key: AKIASF6WONV2B6TMYBGY
-    aws_secret_key: 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
     region: us-east-1a
     key_name: aws-dskp01
     instance_type: t2.small
