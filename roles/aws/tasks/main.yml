@@ -46,7 +46,7 @@
     state: present
     region: us-east-1a
     key_name: aws-dskp01
-    instance_type: t2.micro
+    instance_type: t2.small
     image: ami-000db10762d0c4c05
     wait: yes
     group: ds-aws-secugroup-01
