@@ -8,7 +8,7 @@ instance_role: "lamp"
 ami_id: "ami-000db10762d0c4c05"
 ec2_environment: "Prod"
 ec2_region: us-east-1a
-ec2_url: a4b.us-east-1.amazonaws.com
+ec2_current_url: a4b.us-east-1.amazonaws.com
 vpc_name: demo-vpc
 ec2_vpc_id: vpc-56ee8e2c
 ec2_instance_type: t2.small
