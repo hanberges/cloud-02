@@ -53,7 +53,7 @@
     count: 1
     vpc_subnet_id: subnet-9e4414c2
     assign_public_ip: yes
-    validate_certs: no
+    #validate_certs: no
     instance_tags:
       Name: "{{ instance_name }}"
   ignore_errors: yes
