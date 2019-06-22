@@ -28,15 +28,15 @@
     image: "{{ ami_id }}"
     vpc_subnet_id: "{{ ec2_subnet_id }}"
     assign_public_ip: yes
-    wait: True
-    wait_timeout: 600
-    instance_tags:
-       Name: "{{ instance_name }}"
+    #wait: True
+    #wait_timeout: 600
+    #instance_tags:
+    #   Name: "{{ instance_name }}"
        #Environment: "{{ ec2_environment }}"
        #Server_Role: "{{ instance_role }}"
     count: "{{ ec2_instance_count }}"
   when: os_type == "rhel"
-  register: output_ec2_lin
+  #register: output_ec2_lin
 
 - name: wait for instances to be up and running
   wait_for_connection:
