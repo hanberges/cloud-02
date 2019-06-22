@@ -13,6 +13,7 @@ ec2_vpc_id: vpc-56ee8e2c
 ec2_instance_type: t2.small
 ec2_keypair: aws-dskp01
 ec2_security_group: ds-aws-secugroup-01
+ec2_security_group_id: "sg-054736dc13e58f941"
 ec2_security_group_description: "New security for {{ ec2_environment }} Instances"
 ec2_instance_count: 1
 ec2_subnet_id: subnet-9e4414c2

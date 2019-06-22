@@ -21,7 +21,7 @@
 - name: Create EC2 RHEL Instance
   ec2:
     region: "{{ ec2_region }}"
-    group_id: "{{ secgrp.group_id }}"
+    group_id: "{{ ec2_security_group_id }}"
     keypair: "{{ ec2_keypair }}"
     instance_type: "{{ ec2_instance_type }}"
     image: "{{ ami_id }}"
