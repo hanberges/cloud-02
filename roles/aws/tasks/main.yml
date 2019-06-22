@@ -54,3 +54,8 @@
     count: 1
     vpc_subnet_id: subnet-9e4414c2
     assign_public_ip: yes
+  register: ec2dump
+
+- name: debug ec2dump
+  debug:
+    var: ec2dump
