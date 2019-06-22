@@ -34,7 +34,7 @@
        #Environment: "{{ ec2_environment }}"
        #Server_Role: "{{ instance_role }}"
     count: "{{ ec2_instance_count }}"
-  when: os_type == "linux"
+  when: os_type == "rhel"
   register: output_ec2_lin
 
 - name: wait for instances to be up and running
