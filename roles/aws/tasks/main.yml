@@ -18,26 +18,37 @@
 #        cidr_ip: "0.0.0.0/0"
 #  register: secgrp
 
-- name: Create EC2 RHEL Instance
-  ec2:
+#- name: Create EC2 RHEL Instance
+#  ec2:
     #region: "{{ ec2_region }}"
-    ec2_url: "{{ ec2_current_url }}"
-    group_id: "{{ ec2_security_group_id }}"
-    key_name: "{{ ec2_keypair }}"
-    instance_type: "{{ ec2_instance_type }}"
-    image: "{{ ami_id }}"
-    vpc_subnet_id: "{{ ec2_subnet_id }}"
-    assign_public_ip: yes
+    #ec2_url: "{{ ec2_current_url }}"
+    #group_id: "{{ ec2_security_group_id }}"
+    #key_name: "{{ ec2_keypair }}"
+    #instance_type: "{{ ec2_instance_type }}"
+    #image: "{{ ami_id }}"
+    #vpc_subnet_id: "{{ ec2_subnet_id }}"
+    #assign_public_ip: yes
     #wait: True
     #wait_timeout: 600
     #instance_tags:
     #   Name: "{{ instance_name }}"
        #Environment: "{{ ec2_environment }}"
        #Server_Role: "{{ instance_role }}"
-    count: "{{ ec2_instance_count }}"
-  when: os_type == "rhel"
+    #count: "{{ ec2_instance_count }}"
+  #when: os_type == "rhel"
   #register: output_ec2_lin
 
-- name: wait for instances to be up and running
-  wait_for_connection:
-    delay: 120
+#- name: wait for instances to be up and running
+  #wait_for_connection:
+    #delay: 120
+- name: Create basic EC2 Instance
+  ec2:
+    region: us-east-1a
+    key_name: aws-dskp01
+    instance_type: t2.small
+    image: ami-000db10762d0c4c05
+    wait: yes
+    group: ds-aws-secugroup-01
+    count: 1
+    vpc_subnet_id: subnet-9e4414c2
+    assign_public_ip: yes
