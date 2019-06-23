@@ -12,7 +12,7 @@
     - name: Create basic EC2 Instance
       ec2:
         state: present
-        region: us-east-1a
+        region: us-east-1
         key_name: aws-dskp01
         instance_type: t2.small
         image: ami-000db10762d0c4c05
