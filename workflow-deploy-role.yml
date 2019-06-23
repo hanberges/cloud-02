@@ -10,8 +10,8 @@
   tasks:
   - include_role:
       name: lamp
-    when: target_role =='lamp-role'
+    when: target_role == 'lamp-role'
 
   - include_role:
-      name: lamp
-    when: target_role =='sql-role'
+      name: sql
+    when: target_role == 'sql-role'
