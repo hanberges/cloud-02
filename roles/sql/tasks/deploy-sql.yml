@@ -61,6 +61,12 @@
 - name: Install firewalld package
   shell: "yum -y install firewalld"
 
+- name: Activate firewalld
+  service:
+    name: firewalld
+    enabled: yes
+    state: started
+
 - name: Configure Firewall connections to allow remote access
   firewalld:
     state: enabled
