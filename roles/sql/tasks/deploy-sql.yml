@@ -1,4 +1,6 @@
 ---
+- name: Inclure les taches d'attachement a la souscription
+  include: task-attach-access-rh.yml
 
 - name: Print Red Hat release
   command: "cat /etc/redhat-release"
@@ -55,6 +57,9 @@
   service:
     name: "{{ mssql_service }}"
     state: started
+
+- name: Install firewalld package
+  shell: "yum -y install firewalld"
 
 - name: Configure Firewall connections to allow remote access
   firewalld:
