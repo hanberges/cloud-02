@@ -10,7 +10,7 @@ web_packages:
   - httpd
   - php
   - php-mysql
-  - libsemanage-python
+#  - libsemanage-python
   - firewalld
 
 web_packages_shell: httpd php php-mysql libsemanage-python firewalld
