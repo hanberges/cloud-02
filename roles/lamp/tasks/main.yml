@@ -5,9 +5,9 @@
 
 - name: Installer les packages web
   yum:
-    name: "{{ web_packages }}"
+    name: "{{ web_packages_2 }}"
     state: present
-#        use_backend: yum
+
 
 #- name: Installer les packages web
 #  shell: "yum -y install {{ web_packages_shell }}"
