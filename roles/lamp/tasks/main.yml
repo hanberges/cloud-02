@@ -1,7 +1,7 @@
 ---
 
 - name: Inclure les taches d'attachement a la souscription
-  include: task-attach-access-rh.yml
+  include: task-attach-sub.yml
 
 - name: Installer les packages web
   yum:
