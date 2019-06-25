@@ -6,8 +6,7 @@ dbuser: "dbusername"
 dbpass: "dbpass"
 lib_db: "mariadb-libs"
 
-ak_var: "clouddaykey1"
-org_var: "5318211"
+katello_path: http://sat.example.com/pub/katello-ca-consumer-latest.noarch.rpm
 
 web_packages:
   - httpd
