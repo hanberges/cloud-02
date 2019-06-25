@@ -6,6 +6,9 @@ dbuser: "dbusername"
 dbpass: "dbpass"
 lib_db: "mariadb-libs"
 
+ak_var: "clouddaykey1"
+org_var: "5318211"
+
 web_packages:
   - httpd
   - php
