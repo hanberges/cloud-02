@@ -18,6 +18,11 @@
         name: "{{ katello_path }}"
         state: present
 
+    - name: Desenregistrement de la souscription
+      redhat_subscription:
+        state: absent
+      ignore_errors: True
+
     - name: Enregistrement a Satellite avec la cle d'activation
       redhat_subscription:
         state: present
